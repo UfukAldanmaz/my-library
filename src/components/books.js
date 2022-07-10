@@ -47,7 +47,7 @@ function Books() {
         </form>
         {isLoading ? <p className="loading">Loading📚📚📚</p> : <div className="cards">
             {books.items.map((book) => {
-                if (book.volumeInfo.imageLinks !== undefined)
+                if (book.volumeInfo.imageLinks !== undefined && book.volumeInfo.description !== undefined)
                     return <><div className="book-card" key={book.id}>
                         <img className="book-img" src={book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail} />
                         <button className="popup-btn" onClick={() => {
