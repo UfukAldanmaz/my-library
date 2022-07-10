@@ -16,7 +16,7 @@
     padding: 32px;
     width: 100%;
     max-width: 1000px;
-    background-color: #FFF;
+    background-color: aliceblue;
     border-radius: 15px;
 }
 
@@ -24,58 +24,71 @@
     position: absolute;
     top: 25px;
     right: 30px;
-    background-color: rgb(127, 150, 255);
+    background-color: rgb(236, 238, 250);
+    padding: 8px;
     border-radius: 30px;
-    border-style: ridge;
-    border-color: rgb(125, 164, 237);
+    border-style: solid;
+    border-color: rgb(215, 221, 249);
     font-size: medium;
     color: gray;
-    padding: 5px;
 }
 
 .popup-box {
     display: flex;
-    background-color: #FFF;
+    background-color: aliceblue;
     flex-direction: row;
     margin-bottom: 30px;
 }
 
 .popup-img {
     width: 150px;
-    margin-left: 10px;
+    margin-left: 2px;
+    margin-top: 40px;
 }
 
 .popup-title {
-    background-color: #FFF;
+    background-color: aliceblue;
     padding: 0;
     position: absolute;
-    right: 40px;
     font-size: 28px;
     top: 80px;
+    right: 50px;
 }
 
 .popup-authors {
-    background-color: #FFF;
+    background-color: aliceblue;
+    text-align: right;
     position: absolute;
-    padding: 0;
-    top: 110px;
+    width: 700px;
+    padding: 5px;
+    top: 120px;
     right: 45px;
+    font-weight: lighter;
+    font-style: italic;
+    font-size: 20px;
+    color: black;
 }
 
 .popup-desc {
-    margin: 10px;
-    color: gray;
+    margin-top: 70px;
+    color: black;
     overflow: scroll;
-    background-color: #FFF;
-    height: 180px;
+    background-color: aliceblue;
+    height: 250px;
     margin-bottom: 30px;
+    font-weight: lighter;
+    border-style: ridge;
+    border-color: rgb(228, 224, 224);
+    padding: 10px;
 }
 
 .popup-more {
-    background-color: rgb(127, 150, 255);
-    padding: 5px;
+    background-color: rgb(236, 238, 250);
+    padding: 8px;
     border-radius: 30px;
-    border-style: ridge;
-    border-color: rgb(125, 164, 237);
+    border-style: solid;
+    border-color: rgb(215, 221, 249);
+    font-size: medium;
+    color: gray;
 
 }
