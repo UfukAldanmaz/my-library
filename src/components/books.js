@@ -1,12 +1,15 @@
 import { useEffect, useState } from "react";
 import "../style/books.css"
+import Popup from "./Popup";
 
 function Books() {
 
+    const [currentBook, setCurrentBook] = useState(null);
     const [books, setBooks] = useState(null);
     const [search, setSearch] = useState(null);
     const [error, setError] = useState(null)
     const [isLoading, setIsLoading] = useState(true);
+    const [buttonPopUp, setButtonPopUp] = useState(false);
 
 
     const loadBooks = () => {
@@ -45,17 +48,23 @@ function Books() {
         {isLoading ? <p className="loading">Loading📚📚📚</p> : <div className="cards">
             {books.items.map((book) => {
                 if (book.volumeInfo.imageLinks !== undefined)
-                    return <div className="book-card" key={book.id}>
-                        <a href={book.volumeInfo.previewLink}>
-                            <img className="book-img" src={book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail} />
-                            <p className="title">{book.volumeInfo.title}</p>
-                        </a>
+                    return <><div className="book-card" key={book.id}>
+                        <img className="book-img" src={book.volumeInfo.imageLinks && book.volumeInfo.imageLinks.smallThumbnail} />
+                        <button className="popup-btn" onClick={() => {
+                            setButtonPopUp(true);
+                            setCurrentBook(book)
+                        }}>
+                            <p className="title">{book.volumeInfo.title}</p></button>
                     </div>
-
+                    </>
             })}
-        </div>}
 
-    </div>
+            <Popup trigger={buttonPopUp} setTrigger={setButtonPopUp} book={currentBook} />
+
+        </div>
+        }
+
+    </div >
 }
 
 export default Books;
