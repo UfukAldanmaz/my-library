@@ -12,7 +12,6 @@ function Popup(props) {
                     <h1 className='popup-title'>{props.book.volumeInfo.title}</h1>
                     <h2 className='popup-authors'>{props.book.volumeInfo.authors}</h2>
                     <a className='popup-more' target='_blank' href={props.book.volumeInfo.previewLink}>More</a>
-
                 </div>
                 <h3 className='popup-desc' >{props.book.volumeInfo.description}</h3>
 
