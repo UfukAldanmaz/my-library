@@ -34,7 +34,7 @@ form {
 
 .search:hover {
     width: 350px;
-    background-color: rgb(241, 241, 165);
+    background-color: rgb(236, 236, 177);
 
 }
 
@@ -78,15 +78,20 @@ form {
     align-items: center;
     justify-content: center;
     margin: 18px 18px 18px 18px;
-    padding: 5px;
+    /* padding: 2px 2px 2px 2px; */
     background-color: beige;
     font-weight: bolder;
-    height: 50px;
+    height: 10px;
     border-radius: 12px;
     color: gray;
+}
 
-
-
+.popup-btn {
+    margin-top: 30px;
+    margin-left: 25px;
+    width: 220px;
+    border-style: none;
+    align-items: center;
 }
 
 .book-card {
